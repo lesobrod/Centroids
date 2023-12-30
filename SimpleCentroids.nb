@@ -1,0 +1,306 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12580,        298]
+NotebookOptionsPosition[     12096,        281]
+NotebookOutlinePosition[     12496,        297]
+CellTagsIndexPosition[     12453,        294]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"numVerts", "=", "5"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"DynamicModule", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"pts", "=", 
+        RowBox[{"N", "@", 
+         RowBox[{"CirclePoints", "[", "numVerts", "]"}]}]}], ",", "polygon"}],
+       "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Framed", "@", 
+      RowBox[{"Row", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Framed", "@", "\[IndentingNewLine]", 
+          RowBox[{"LocatorPane", "[", 
+           RowBox[{
+            RowBox[{"Dynamic", "@", "pts"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"Dynamic", "[", "\[IndentingNewLine]", 
+             RowBox[{"Graphics", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"EdgeForm", "[", 
+                  RowBox[{"{", 
+                   RowBox[{"Thick", ",", "Blue"}], "}"}], "]"}], ",", 
+                 "\[IndentingNewLine]", "LightBlue", ",", 
+                 RowBox[{"polygon", "=", 
+                  RowBox[{"Polygon", "@", "pts"}]}], ",", 
+                 "\[IndentingNewLine]", 
+                 RowBox[{"PointSize", "->", "0.02"}], ",", 
+                 "\[IndentingNewLine]", "Red", ",", 
+                 RowBox[{"Point", "@", 
+                  RowBox[{"RegionCentroid", "@", "polygon"}]}], ",", 
+                 "\[IndentingNewLine]", "Orange", ",", 
+                 RowBox[{"Point", "@", 
+                  RowBox[{"Mean", "@", "pts"}]}], ",", "\[IndentingNewLine]", 
+                 "Magenta", ",", 
+                 RowBox[{"Point", "@", 
+                  RowBox[{"RegionCentroid", "@", 
+                   RowBox[{"Line", "@", 
+                    RowBox[{"Append", "[", 
+                    RowBox[{"pts", ",", 
+                    RowBox[{"Last", "@", "pts"}]}], "]"}]}]}]}]}], 
+                "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", 
+               RowBox[{"PlotRange", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"-", "1"}], ",", "1"}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"-", "1"}], ",", "1"}], "}"}]}], "}"}]}], ",", 
+               RowBox[{"ImageSize", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"250", ",", "250"}], "}"}]}]}], "]"}], "]"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"Appearance", "\[Rule]", 
+             RowBox[{"Style", "[", 
+              RowBox[{"\"\<+\>\"", ",", "30", ",", "Bold", ",", "Black"}], 
+              "]"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"ImageSize", "\[Rule]", "250"}]}], "\[IndentingNewLine]", 
+           "]"}]}], ",", "\[IndentingNewLine]", 
+         RowBox[{"PointLegend", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"Red", ",", "Orange", ",", "Magenta"}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<Lamina centroid\>\"", ",", "\"\<Perimeter centroid\>\"", 
+             ",", "\"\<Vertices centroid\>\""}], "}"}]}], "]"}]}], 
+        "\[IndentingNewLine]", "}"}], "]"}]}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.912858516656557*^9, 3.9128586001014695`*^9}, {
+   3.9128586599932566`*^9, 3.912858715765414*^9}, {3.9128587605466375`*^9, 
+   3.9128589937512197`*^9}, {3.91286180510252*^9, 3.9128619838820972`*^9}, {
+   3.9128620265725465`*^9, 3.9128623095440006`*^9}, {3.9128635868705225`*^9, 
+   3.9128636935688915`*^9}, {3.9128637244144583`*^9, 3.912863744378158*^9}, {
+   3.912863828419341*^9, 3.9128638379924116`*^9}, 3.9128638704303875`*^9, {
+   3.9128639488250647`*^9, 3.9128639905930834`*^9}, 3.9129084819616337`*^9, {
+   3.9129085262972336`*^9, 3.912908538402443*^9}, {3.9129086802294436`*^9, 
+   3.912908748939329*^9}, {3.9129088252392225`*^9, 3.9129088728733807`*^9}, {
+   3.912908915377672*^9, 3.9129089938234243`*^9}, {3.9129091327325525`*^9, 
+   3.912909157165553*^9}, {3.912909274431011*^9, 3.912909293624447*^9}, {
+   3.912909333580139*^9, 3.9129093362180667`*^9}},
+ CellLabel->"In[21]:=",ExpressionUUID->"c8ec5afa-1116-4e47-8193-104ab163b7b1"],
+
+Cell[BoxData[
+ DynamicModuleBox[{$CellContext`pts$$ = {{0.472, -0.31499999999999995`}, {
+  0.9510565162951535, 0.30901699437494745`}, {
+  0.44799999999999995`, -0.13}, {-0.9510565162951535, 
+  0.30901699437494745`}, {-0.5877852522924731, -0.8090169943749475}}, \
+$CellContext`polygon$$ = 
+  Polygon[{{0.472, -0.31499999999999995`}, {0.9510565162951535, 
+   0.30901699437494745`}, {0.44799999999999995`, -0.13}, {-0.9510565162951535,
+    0.30901699437494745`}, {-0.5877852522924731, -0.8090169943749475}}]}, 
+  FrameBox[
+   TemplateBox[{
+     FrameBox[
+      LocatorPaneBox[
+       Dynamic[$CellContext`pts$$], 
+       DynamicBox[
+        ToBoxes[
+         Graphics[{
+           EdgeForm[{Thick, Blue}], LightBlue, $CellContext`polygon$$ = 
+           Polygon[$CellContext`pts$$], PointSize -> 0.02, Red, 
+           Point[
+            RegionCentroid[$CellContext`polygon$$]], Orange, 
+           Point[
+            Mean[$CellContext`pts$$]], Magenta, 
+           Point[
+            RegionCentroid[
+             Line[
+              Append[$CellContext`pts$$, 
+               Last[$CellContext`pts$$]]]]]}, PlotRange -> {{-1, 1}, {-1, 1}},
+           ImageSize -> {250, 250}], StandardForm], 
+        ImageSizeCache -> {250., {123., 127.}}], Appearance -> 
+       StyleBox["\"+\"", 30, Bold, 
+         GrayLevel[0], StripOnInput -> False], ImageSize -> 250], 
+      StripOnInput -> False], 
+     TemplateBox[{
+      "\"Lamina centroid\"", "\"Perimeter centroid\"", 
+       "\"Vertices centroid\""}, "PointLegend", DisplayFunction -> (StyleBox[
+        StyleBox[
+         PaneBox[
+          TagBox[
+           GridBox[{{
+              TagBox[
+               GridBox[{{
+                  GraphicsBox[{{}, {
+                    Directive[
+                    EdgeForm[
+                    Directive[
+                    Opacity[0.3], 
+                    GrayLevel[0]]], 
+                    PointSize[0.5], 
+                    AbsoluteThickness[1.6], 
+                    RGBColor[1, 0, 0]], {
+                    Directive[
+                    EdgeForm[
+                    Directive[
+                    Opacity[0.3], 
+                    GrayLevel[0]]], 
+                    PointSize[0.5], 
+                    AbsoluteThickness[1.6], 
+                    RGBColor[1, 0, 0]], 
+                    PointBox[
+                    NCache[{
+                    Scaled[{
+                    Rational[1, 2], 
+                    Rational[1, 2]}]}, {
+                    Scaled[{0.5, 0.5}]}]]}}}, AspectRatio -> Full, 
+                   ImageSize -> {10, 10}, PlotRangePadding -> None, 
+                   ImagePadding -> Automatic, 
+                   BaselinePosition -> (Scaled[0.1] -> Baseline)], #}, {
+                  GraphicsBox[{{}, {
+                    Directive[
+                    EdgeForm[
+                    Directive[
+                    Opacity[0.3], 
+                    GrayLevel[0]]], 
+                    PointSize[0.5], 
+                    AbsoluteThickness[1.6], 
+                    RGBColor[1, 0.5, 0]], {
+                    Directive[
+                    EdgeForm[
+                    Directive[
+                    Opacity[0.3], 
+                    GrayLevel[0]]], 
+                    PointSize[0.5], 
+                    AbsoluteThickness[1.6], 
+                    RGBColor[1, 0.5, 0]], 
+                    PointBox[
+                    NCache[{
+                    Scaled[{
+                    Rational[1, 2], 
+                    Rational[1, 2]}]}, {
+                    Scaled[{0.5, 0.5}]}]]}}}, AspectRatio -> Full, 
+                   ImageSize -> {10, 10}, PlotRangePadding -> None, 
+                   ImagePadding -> Automatic, 
+                   BaselinePosition -> (Scaled[0.1] -> Baseline)], #2}, {
+                  GraphicsBox[{{}, {
+                    Directive[
+                    EdgeForm[
+                    Directive[
+                    Opacity[0.3], 
+                    GrayLevel[0]]], 
+                    PointSize[0.5], 
+                    AbsoluteThickness[1.6], 
+                    RGBColor[1, 0, 1]], {
+                    Directive[
+                    EdgeForm[
+                    Directive[
+                    Opacity[0.3], 
+                    GrayLevel[0]]], 
+                    PointSize[0.5], 
+                    AbsoluteThickness[1.6], 
+                    RGBColor[1, 0, 1]], 
+                    PointBox[
+                    NCache[{
+                    Scaled[{
+                    Rational[1, 2], 
+                    Rational[1, 2]}]}, {
+                    Scaled[{0.5, 0.5}]}]]}}}, AspectRatio -> Full, 
+                   ImageSize -> {10, 10}, PlotRangePadding -> None, 
+                   ImagePadding -> Automatic, 
+                   BaselinePosition -> (Scaled[0.1] -> Baseline)], #3}}, 
+                GridBoxAlignment -> {
+                 "Columns" -> {Center, Left}, "Rows" -> {{Baseline}}}, 
+                AutoDelete -> False, 
+                GridBoxDividers -> {
+                 "Columns" -> {{False}}, "Rows" -> {{False}}}, 
+                GridBoxItemSize -> {"Columns" -> {{All}}, "Rows" -> {{All}}}, 
+                GridBoxSpacings -> {"Columns" -> {{0.5}}, "Rows" -> {{0.8}}}],
+                "Grid"]}}, 
+            GridBoxAlignment -> {"Columns" -> {{Left}}, "Rows" -> {{Top}}}, 
+            AutoDelete -> False, 
+            GridBoxItemSize -> {
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+            GridBoxSpacings -> {"Columns" -> {{1}}, "Rows" -> {{0}}}], 
+           "Grid"], Alignment -> Left, AppearanceElements -> None, 
+          ImageMargins -> {{5, 5}, {5, 5}}, ImageSizeAction -> "ResizeToFit"],
+          LineIndent -> 0, StripOnInput -> False], {FontFamily -> "Arial"}, 
+        Background -> Automatic, StripOnInput -> False]& ), 
+      InterpretationFunction :> (RowBox[{"PointLegend", "[", 
+         RowBox[{
+           RowBox[{"{", 
+             RowBox[{
+               
+               TemplateBox[<|"color" -> RGBColor[1, 0, 0]|>, 
+                "RGBColorSwatchTemplate"], ",", 
+               
+               TemplateBox[<|"color" -> RGBColor[1, 0.5, 0]|>, 
+                "RGBColorSwatchTemplate"], ",", 
+               
+               TemplateBox[<|"color" -> RGBColor[1, 0, 1]|>, 
+                "RGBColorSwatchTemplate"]}], "}"}], ",", 
+           RowBox[{"{", 
+             RowBox[{#, ",", #2, ",", #3}], "}"}]}], "]"}]& ), Editable -> 
+      True]},
+    "RowDefault"],
+   StripOnInput->False],
+  DynamicModuleValues:>{}]], "Output",
+ CellChangeTimes->{
+  3.9128589945162153`*^9, 3.9128618098595233`*^9, 3.912861841813754*^9, {
+   3.9128618731251373`*^9, 3.9128619531407127`*^9}, {3.9128620454539185`*^9, 
+   3.9128621408354893`*^9}, {3.912862210637046*^9, 3.912862233225479*^9}, 
+   3.9128623099820356`*^9, 3.9128636946855087`*^9, 3.9128637454222035`*^9, 
+   3.9128638395398145`*^9, 3.912863873610635*^9, {3.9128639491403303`*^9, 
+   3.912863962370272*^9}, {3.9129087093379736`*^9, 3.9129087494901247`*^9}, 
+   3.912908827862689*^9, {3.912908962636979*^9, 3.912908978620103*^9}, 
+   3.9129091449979258`*^9, 3.912909294897238*^9, 3.9129093384085827`*^9},
+ CellLabel->"Out[22]=",ExpressionUUID->"ddf2c319-472e-4f98-8d51-5ce02b90cd78"]
+}, Open  ]]
+},
+WindowSize->{949, 497},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (November 18, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"2b9a7109-59da-44a9-a449-8a9c0ed0355c"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 4300, 89, 390, "Input",ExpressionUUID->"c8ec5afa-1116-4e47-8193-104ab163b7b1"],
+Cell[4883, 113, 7197, 165, 297, "Output",ExpressionUUID->"ddf2c319-472e-4f98-8d51-5ce02b90cd78"]
+}, Open  ]]
+}
+]
+*)
+
